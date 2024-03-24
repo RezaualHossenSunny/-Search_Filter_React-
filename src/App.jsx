@@ -7,21 +7,29 @@ function App() {
 
   return (
     <>
-    <input type='text' placeholder='serch' onChange={(e)=> setSerch(e.target.value)}/>
+    <div className='max-w-container  mx-auto py-8'>
+   <div className=' border-2 w-[300px] mx-auto rounded py-3 px-4  border-gray-800'>
 
-    { 
-      json.filter((val)=>{
-        if(setSerch == ''){
-          return val;
-        }else if(val.last_name.toLocaleLowerCase().includes(serch.toLocaleLowerCase())){
-          return val
-        } 
+   <input className='w-full outline-none text-lg font-serif font-semibold text-violet-700'  type='text' placeholder='search ' onChange={(e)=> setSerch(e.target.value)}/>
+   </div>
 
-      }).map((valu,key)=>{
-       return <div> <p>{valu.last_name}</p></div>
 
-      })
-    }
+{ 
+  json.filter((val)=>{
+    if(setSerch == ''){
+      return val;
+    }else if(val.last_name.toLocaleLowerCase().includes(serch.toLocaleLowerCase())){
+      return val
+    } 
+
+  }).map((valu,key)=>{
+   return <div className='text-center mt-3'> <p>{valu.last_name}</p></div>
+
+  })
+}
+</div>
+    
+ 
     </>
   )
 }
