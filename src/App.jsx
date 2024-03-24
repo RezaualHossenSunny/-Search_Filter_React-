@@ -7,10 +7,10 @@ function App() {
 
   return (
     <>
-    <div className='max-w-container  mx-auto py-8'>
-   <div className=' border-2 w-[300px] mx-auto rounded py-3 px-4  border-gray-800'>
+    <div className='max-w-container  mx-auto py-8 bg-gray-100'>
+   <div className=' border-2 w-[300px] mx-auto rounded py-3 px-4  border-gray-800 bg-gray-100'>
 
-   <input className='w-full outline-none text-lg font-serif font-semibold text-violet-700'  type='text' placeholder='search ' onChange={(e)=> setSerch(e.target.value)}/>
+   <input className='w-full outline-none text-lg font-serif font-semibold text-violet-700 bg-gray-100'  type='text' placeholder='search ' onChange={(e)=> setSerch(e.target.value)}/>
    </div>
 
 
